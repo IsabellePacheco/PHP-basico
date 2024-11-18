@@ -12,9 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         header("Location: 4b_bem_vindo.php");
         exit();
     }
-}else{
+}else {
     // mensagem de erro
-    $erro = "Senha incorreta. Tente novamente!";
+    $erro = "Senha incorreta. Tente novamente.";
 }
 
 ?>
@@ -33,8 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     </form>
 
     <?php
-    if(isset($erro)){
-        echo "<p style='color: red;'> $erro </p>";
+    if (isset($erro)){
+        echo "<p style='color: red;'>$erro</p>";
     }
 
     ?>
