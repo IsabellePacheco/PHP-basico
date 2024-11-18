@@ -3,7 +3,7 @@
 <!-- esse programa recebe dois valores pela URL usando o método GET -->
 
 <?php
-// $variável PHP  ''variável back end
+// $variável PHP  'variável back end
     $numero1 = $_GET['numero1'];
     $numero2 = $_GET['numero2'];
 
