@@ -5,7 +5,7 @@
     <title>Upload de Imagem</title>
 </head>
 <body>
-    <h2>Armazenar imagens</h2>
+    <h2>Coloque aqui uma imagem de sua preferência</h2>
     
     <!-- formulário com método post -->
     <!-- multipart/form-data: Este valor é necessário se o usuário for enviar um arquivo através do formulário -->
