@@ -10,6 +10,7 @@
     <title>Exemplo de formulario de cadastro </title>
 </head>
 <body>
+    <h2>Digite seu nome, email e telefone </h2>
     <!-- Método pode ser POST ou GET -->
     <form method="post" action="">
         <label for="nome">Nome:</label>
