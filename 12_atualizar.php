@@ -1,10 +1,10 @@
 <!-- Passar id via URL -->
-<!-- http://localhost/php-basico-Alunos/12_atualizar.php?id=1-->
+<!-- http://localhost/php-basico-IsabellePacheco/12_atualizar.php?id=1-->
 
 
 <?php
 // Conecta ao banco de dados
-$servername = "localhost";
+$servername = "localhost:3309";
 $username = "root";
 $password = "";
 $dbname = "exercicio";
@@ -35,7 +35,21 @@ if (isset($_GET['id'])) {
 }
 
 
-// Digitar PHP + SQL (1º Aqui)
+// verifica se o formulario foi enviado para atualizar o cliente
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $id = $_POST['id'];
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+
+    $sql = "UPDATE clientes SET nome = '$nome', email = '$email' WHERE id = '$id'";
+
+    if ($conn->query($sql) === TRUE){
+        echo "<p> Cliente atualizado com sucesso!</p>";
+    }else{
+        echo "<p>Erro ao atualizar clientes:". $conn->error . "</p>";
+    }
+}
 
 
 ?>
