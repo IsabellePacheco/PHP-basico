@@ -5,13 +5,14 @@
     <title>Formulário de Feedback</title>
 </head>
 <body>
+    <h2>Digite aqui seu nome, email </h2>
     <form method="post" action="">
         <label for="nome">Nome:</label>
         <input type="text" name="nome" required><br>
 
         <label for="email">Email:</label>
         <input type="email" name="email" required><br>
-
+<h2>Deixe uma mensagem para nos</h2>
         <label for="mensagem">Mensagem:</label>
         <textarea name="mensagem" required></textarea><br>
 
