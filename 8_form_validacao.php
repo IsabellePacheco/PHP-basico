@@ -27,6 +27,8 @@
         $mensagem = $_POST['mensagem'];
         // Valida se os campos não estão vazios e o email é válido
 
+
+        // verifica se os campos não estão vazios e se o e email é valido
         if (!empty($nome) && !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($mensagem)) {
             echo "<p style='color: green; '>Feedback enviado com sucesso!</p>";
         } else {
