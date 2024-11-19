@@ -11,6 +11,14 @@
     ); 
 -->
 
+<!-- Para inserir dados na tabela -->
+<!--
+    INSERT INTO clientes (nome, email) 
+    VALUES 
+    ('$nome', '$email');
+-->
+
+
 <?php
 
 // Alterar de acordo com o numero da porta
