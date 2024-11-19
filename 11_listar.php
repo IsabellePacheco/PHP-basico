@@ -24,13 +24,12 @@ if ($result->num_rows > 0){
     echo "<table border='2'>";
 
         // define cabeçalho da tabela
-        echo "<tr><th>ID</th><th>Nome</th><th>Email</th></tr>";
+        echo "<tr><th>Nome</th><th></th><th>Email</th></tr>";
 
         // enquanto tiver dados preenchidos no BD
         // Listar e exibir em formato de tabela
         while ($row = $result->fetch_assoc()){
             echo "<tr>";
-            echo "<td>" . $row['id'] . "</td>";
             echo "<td>" . $row['nome'] . "</td>";
             echo "<td>" . $row['email'] . "</td>";
             echo "</tr>";
