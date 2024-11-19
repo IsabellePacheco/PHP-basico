@@ -1,8 +1,22 @@
 <?php
 // Página de login (15a_sistema.php)
+session_start();
 
+// verifica se o formulario foi enviado 
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $usuario = $_POST['usuario'];
+    $senha = $_POST['senha'];
 
-// Digitar PHP (1º Aqui)
+    // verifica se os dados são validos(usuario:isa, senha:123)
+    if ($usuario == 'isa' && $senha === '123'){
+        // salva o nome do usuario na sessão
+        $_SESSION['usuario'] = $usuario; 
+        header("Location: 15b_restrita.php");
+        exit();
+    } else {
+        $erro = "Usuario ou senha incorretos.";
+    }
+}
 
 
 ?>
