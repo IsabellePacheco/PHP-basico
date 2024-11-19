@@ -14,6 +14,9 @@
         <label for="email">Email:</label>
         <input type="email" name="email" required><br>
 
+        <label for="telefone">Telefone:</label>
+        <input type="text" name="telefone" required><br>
+
         <button type="submit">Cadastrar</button>
     </form>
 
@@ -23,6 +26,7 @@
         // Recebe os valores enviados pelo formulário
         $nome = $_POST['nome'];
         $email = $_POST['email'];
+        $telefone = $_POST['telefone'];
 
         // Conecta ao banco de dados
         $servername = "localhost:3309";
@@ -40,7 +44,7 @@
 
         // resgistro no banco de dados
         // inserir na tabela clientes os seguintes valores
-        $sql = "INSERT INTO clientes (nome, email) VALUES ('$nome', '$email')";
+        $sql = "INSERT INTO clientes (nome, email, telefone) VALUES ('$nome', '$email', '$telefone')";
 
         // conferir se a varaiavel 'sql' esta correta
         if ($conn->query($sql) == TRUE) {
