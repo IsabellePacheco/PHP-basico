@@ -24,7 +24,7 @@ if ($result->num_rows > 0){
     echo "<table border='2'>";
 
         // define cabeçalho da tabela
-        echo "<tr><th>Nome</th><th></th><th>Email</th></tr>";
+        echo "<tr><th>Nome</th><th>Email</th><th>Telefone</th></tr>";
 
         // enquanto tiver dados preenchidos no BD
         // Listar e exibir em formato de tabela
