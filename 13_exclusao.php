@@ -1,6 +1,7 @@
 <!-- Passar id via URL -->
 <!-- http://localhost/php-basico-IsabellePacheco/13_exclusao.php?id=2-->
 
+
 <?php
 // Conecta ao banco de dados
 $servername = "localhost:3309";
