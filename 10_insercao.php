@@ -25,7 +25,7 @@
         $email = $_POST['email'];
 
         // Conecta ao banco de dados
-        $servername = "localhost";
+        $servername = "localhost:3309";
         $username = "root";
         $password = "";
         $dbname = "exercicio";
@@ -38,9 +38,21 @@
         }
 
 
-        // Digitar PHP + SQL (1º Aqui)
+        // resgistro no banco de dados
+        // inserir na tabela clientes os seguintes valores
+        $sql = "INSERT INTO clientes (nome, email) VALUES ('$nome', '$email')";
 
+        // conferir se a varaiavel 'sql' esta correta
+        if ($conn->query($sql) == TRUE) {
+            // exibe a mensagem
+            echo  "<p style='color: green; '>Cliente cadastrado com sucesso!</p>";
+        } else {
+            // exibea mensagem
+            echo "<p style='color: red; '> Erro ao cadastrar: " . $conn->error ."</p>";
+        }
 
+        // exibe a conexão
+        $conn->close();
     }
     ?>
 </body>
