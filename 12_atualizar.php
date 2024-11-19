@@ -1,7 +1,7 @@
 <!-- Passar id via URL -->
 <!-- http://localhost/php-basico-IsabellePacheco/12_atualizar.php?id=1-->
 
-
+<H2>Atualize seu cadastro</H2>
 <?php
 // Conecta ao banco de dados
 $servername = "localhost:3309";
@@ -41,8 +41,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $id = $_POST['id'];
     $nome = $_POST['nome'];
     $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
 
-    $sql = "UPDATE clientes SET nome = '$nome', email = '$email' WHERE id = '$id'";
+    $sql = "UPDATE clientes SET nome = '$nome', email = '$email', telefone ='$telefone' WHERE id = '$id'";
 
     if ($conn->query($sql) === TRUE){
         echo "<p> Cliente atualizado com sucesso!</p>";
@@ -69,6 +70,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         <label for="email">Email:</label>
         <input type="email" name="email" value="<?php echo isset($cliente['email']) ? $cliente['email'] : ''; ?>" required><br>
+
+        <label for="email">Telefone:</label>
+        <input type="text" name="telefone" value="<?php echo isset($cliente['telefone']) ? $cliente['telefone'] : ''; ?>" required><br>
 
         <button type="submit">Atualizar</button>
     </form>
