@@ -5,35 +5,35 @@
     <title>Formulário de Feedback</title>
 </head>
 <body>
-    <h2>Deixe sua opnião sobre o nosso atendimento</h2>
     <form method="post" action="">
         <label for="nome">Nome:</label>
-        <input type="text" name="nome" ><br>
+        <input type="text" name="nome" required><br>
 
         <label for="email">Email:</label>
-        <input type="email" name="email" ><br>
+        <input type="email" name="email" required><br>
 
         <label for="mensagem">Mensagem:</label>
-        <textarea name="mensagem" ></textarea><br>
+        <textarea name="mensagem" required></textarea><br>
 
         <button type="submit">Enviar</button>
     </form>
 
     <?php
-    // verifica se o formulário foi enviado 
-    if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-        // recebe os valores enviados pelo formulário
+    // Verifica se o formulário foi enviado
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        // Recebe os valores enviados pelo formulário
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $mensagem = $_POST['mensagem'];
+        // Valida se os campos não estão vazios e o email é válido
 
-        // valida se os campos não estão vazios e o email é validade
-        if (!empty($nome) && !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($mensagem)){
-            echo "<p style='color:green;'>Feedback enviado com sucesso!</p>";
+        if (!empty($nome) && !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($mensagem)) {
+            echo "<p style='color: green; '>Feedback enviado com sucesso!</p>";
         } else {
-            echo "<p style='color:red;'>Por favor, preencha todos os campos corretamente.</p>";
+            echo "<p style='color: red; '>Por favor, preencha todos os campos corretamente.</p>";
         }
-    }
+}
+
     ?>
 </body>
 </html>
